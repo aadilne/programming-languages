@@ -17,7 +17,7 @@
     }
 }
 
-//02 private construdtor
+//02 private construdtor static class.method() se call hota hai object se nhi
 
 class  utility{
 
@@ -54,7 +54,7 @@ class StudentP3 {
         age = a;
     }
 
-    StudentP3(String n) {   // yaha pr only name dege to age bydefault 18 upr wale constructor ko de dega
+    StudentP3(String n) {   // yaha pr only name dege to age bydefault 18 upr wale constructor ko de dega aur ye this() krta hai
         this(n, 18);
     }
 
