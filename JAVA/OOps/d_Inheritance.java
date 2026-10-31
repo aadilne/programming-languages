@@ -65,3 +65,40 @@ public class d_Inheritance {
         obj.EmpPrint();
     }
 }
+
+
+// Type of inheritace.
+// 1. Single Inheritace
+
+class Company_A{
+
+    protected String comAname;
+
+    public Company_A(String comAname){
+        this.comAname = comAname;
+    }
+
+   void  comAmtd(){
+        System.out.println("Company_A Emp Name:-" + comAname);
+    }
+}
+
+class Company_BOf_ComA extends Company_A{
+
+    int comBemp ;
+
+    public Company_BOf_ComA (int comBemp , String comAname ){
+        super(String comAname){
+
+            this.comBemp = comBemp;
+            this.comBemp = comBemp;
+        }
+    }
+
+    public void CompanyBmtd(){
+        super.comAmtd();
+        System.out.println();
+
+    }
+
+}
