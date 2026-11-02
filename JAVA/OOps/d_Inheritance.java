@@ -32,9 +32,9 @@ public class d_Inheritance {
         child2Obj.Child2Print();
 
         // 4. Multipule Inheritance is not supported in java. But we can achieve it through interface.
-        Multipule_Child multipuleChildObj = new Multipule_Child();
-        multipuleChildObj.Multipule_ChildPrint();
-        multipuleChildObj.Parent2Print();
+        MultipuleC multipuleCObj = new MultipuleC();
+        multipuleCObj.hello();
+        
 
     }
 }
@@ -171,21 +171,19 @@ class Child2 extends Parent1{
 }
 
 // 4. Multipule Inheritace is not supported in java. But we can achieve it through interface.
-interface Multipule_Parent2{
-     void Parent2Print(){
-        System.out.println("Parent2 Class");
-    }
+
+interface MultipuleA {
+    default void hello() { System.out.println("Hello from A"); }
+}
+interface MultipuleB {
+    default void hello() { System.out.println("Hello from B"); }
 }
 
-interface Multipule_Parent3{
-
-     void Parent3Print(){
-        System.out.println("Parent3 Class");
-    }
-}
-
-class Multipule_Child implements Multipule_Parent2, Multipule_Parent3{  // This will give error because java does not support multiple inheritace
-     void Multipule_ChildPrint(){
-        System.out.println("Multipule Child Class");
+// class C implements A, B { }   // ❌ Compile error: dono me hello() hai
+class MultipuleC implements MultipuleA, MultipuleB {
+    public void hello() {
+        MultipuleA.super.hello();   // A wala call
+        MultipuleB.super.hello();   // B wala call
+        System.out.println("Hello from C");
     }
 }
