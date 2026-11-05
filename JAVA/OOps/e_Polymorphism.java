@@ -12,7 +12,7 @@ public class e_Polymorphism {
    //   System.out.println("Sum of 2 numbers: " + obj.add(10, 20));
         System.out.println("Sum of 2 double numbers: " + obj.add(10 , 15 , 20));
 
-        Truck truckObj = new Truck();  //Upcasting  Downcasting samghna hai
+        Truck truckObj = new Truck();  //Upcasting done  Downcasting samghna hai
         truckObj.run();
 
         Truck carObj = new Car();
